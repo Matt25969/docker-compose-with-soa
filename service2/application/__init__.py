@@ -1,7 +1,9 @@
 from flask import Flask
-from os import getenv
 
 app = Flask(__name__)
 
-from application import routes
+@app.route('/')
+@app.route('/string')
+def requestFunction():
+    return "Service 2 returns this String\n" 
 
